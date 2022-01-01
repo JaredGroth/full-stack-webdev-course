@@ -70,15 +70,18 @@
   } */
 </style>
 
+<script lang="ts">
+  export let todo : ToDo
+</script>
 
 <div class="todo">
     <form action="" method="">
-        <input type="hidden" name="done" value="" />
+        <input type="hidden" name="done" value={todo.done ? "true" : "false"} />
         <button aria-label="Mark item Done/Not Done" class="toggle"></button>
     </form>
 
     <form action="" method="" class="text">
-        <input type="text" name="" value="" />
+        <input type="text" name="" value={todo.text} />
         <button aria-label="Save ToDo" class="save"></button>
     </form>
 
